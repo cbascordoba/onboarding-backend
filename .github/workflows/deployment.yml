@@ -17,7 +17,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Build Docker image
-      run: ls
+      run: docker build -t my-nginx-image -f Dockerfile .
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
